@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="/sort_url" method="POST">
+            {% csrf_token %}
+            <input type="url" name="source_url" required value="{{source_url}}">
+            {% if sorted_url %}
+                <a href="{{sorted_url}}">{{sorted_url}}</a>
+            {% endif %}
+            <input type="submit">
+        </form>
+    </body>
+</html>
